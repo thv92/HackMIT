@@ -1,0 +1,30 @@
+body {
+    background: lightblue;
+    margin: 0;
+}
+
+form {
+    background: lightgray;
+    padding: 10px;
+    border: 1px inset;
+    border-color: black;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.post {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+div form {
+    background: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}

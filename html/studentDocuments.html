@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Documents</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS for Sidebar --> 
+    <link href="../stylesheets/simple-sidebar.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+    <style type="text/css" media="screen">
+        .fa{
+            padding-right: 5% !important;
+            line-height: inherit !important;
+        }
+        .list-text{
+            /*padding-left: 1;*/
+        }
+    </style>
+
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" style="float:">
+                <ul class="sidebar-nav li-text">
+                    <li class="sidebar-brand">
+                        <a href="userStudentMain.html">
+                            Student Dashboard
+                        </a>
+                    </li>
+ 
+                  <li>
+                        <a href="studentCheck_In.html" class="list-text"><i class="fa fa-clock-o fa-2x"></i>Check In</a>
+                    </li>
+
+                    <li>
+                        <a href="studentDocuments.html" class="list-text"><i class="fa fa-folder-o fa-2x"></i>Documents</a>
+                    </li>
+                    <li>
+                        <a href="studentMessages.html" class="list-text"><i class="fa fa-comment-o fa-2x"></i>Messages</a>
+                    </li>
+                
+                    <li>
+                    <a href="{{logout_url}}" class="list-text"><i class="fa fa-sign-out fa-2x"></i>Log Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p style="text-align:right;"><b>{{space_name}}: {{space_key}}</b></a></p>
+                            <h1>Upload Documents</h1>
+                            <h5>Connect with Dropbox to share your documents.</h5>
+                               <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="b0sj4vv0q580ak3"></script>
+                               <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+
+    </body>
+
+    </html>

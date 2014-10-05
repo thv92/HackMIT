@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Check In</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS for Sidebar --> 
+    <link href="../stylesheets/simple-sidebar.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+    <style type="text/css" media="screen">
+        .fa{
+            padding-right: 5% !important;
+            line-height: inherit !important;
+        }
+        .list-text{
+            /*padding-left: 1;*/
+        }
+    </style>
+
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" style="float:">
+                <ul class="sidebar-nav li-text">
+                    <li class="sidebar-brand">
+                        <a href="userMentorMain.html">
+                            Mentor Dashboard
+                        </a>
+                    </li>
+ 
+                  <li>
+                        <a href="mentorCheck_In.html" 
+                        class="list-text"><i class="fa fa-clock-o fa-2x"></i>Check In</a>
+                    </li>
+
+                    <li>
+                        <a href="mentorDocuments.html" class="list-text"><i class="fa fa-folder-o fa-2x"></i>Documents</a>
+                    </li>
+                    <li>
+                        <a href="mentorMessages.html" class="list-text"><i class="fa fa-comment-o fa-2x"></i>Messages</a>
+                    </li>
+                    <li>
+                        <a href="mentorRoster" class="list-text"><i class="fa fa-list-alt fa-2x"></i>Student Roster</a>
+                    </li>
+                    <li>
+                    <a href="{{logout_url}}" class="list-text"><i class="fa fa-sign-out fa-2x"></i>Log Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                         <div class="col-lg-12">
+                            <p style="text-align:right;"><b>{{space_name}}: {{space_key}}</b></a></p>
+                            <h1>Check In</h1>
+                            <h5>Send a notification to your student(s) with Yo.</h5>
+                               
+                          <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+
+    </body>
+
+    </html>

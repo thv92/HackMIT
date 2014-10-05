@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Katy's Wall</title>
+    <link href="stylesheets/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- when changing database info, always use post, not get -->
+    <!-- can temporarily change to get for debugging purposes -->
+    <h1>Send me a message!</h1>
+    <form action="/" method="post">
+        <input name="sender" placeholder="Your Name">
+        <br>
+        <textarea name="message" placeholder="Write a Message"></textarea>
+        <br>
+        <input name="mood" placeholder="How are you feeling?">
+        <br>
+        <button>Post it!</button>
+    </form>
+    
+    {% for wall_post in wall_posts %}
+        <div class="post">
+            <div class="message">{{ wall_post.message }}</div>
+            <div class="sender"><em>- {{ wall_post.sender}}</em></div>
+            <div class="mood"><em>Feeling {{wall_post.mood}}</em></div>
+            <br>
+            <div class="timestamp">{{ wall_post.timestamp }}</div>
+            <form action="/delete" method="post">
+                <input name="key" value="{{ wall_post.key.urlsafe() }}" type="hidden">
+                <button>Delete Post</button>
+            </form>
+        </div>
+        <br>
+    {% endfor %}
+</body>
+</html>
