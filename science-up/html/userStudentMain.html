@@ -10,7 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mentor Roster</title>
+    <title>Student Dashboard</title>
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -39,23 +40,20 @@
             <div id="sidebar-wrapper" style="float:">
                 <ul class="sidebar-nav li-text">
                     <li class="sidebar-brand">
-                        <a href="userMentorMain.html">
-                            Mentor Dashboard
+                        <a href="#">
+                            Student Dashboard
                         </a>
                     </li>
  
-                  <li>
-                        <a href="mentorCheck_In.html" class="list-text"><i class="fa fa-clock-o fa-2x"></i>Check In</a>
+                    <li>
+                        <a href="studentCheck_In.html" class="list-text"><i class="fa fa-clock-o fa-2x"></i>Check In</a>
                     </li>
+                    <li>
+                        <a href="studentDocuments.html" class="list-text"><i class="fa fa-folder-o fa-2x"></i>Documents</a>
+                    </li>
+                    <li>
+                        <a href="studentMessages.html" class="list-text"><i class="fa fa-comment-o fa-2x"></i>Messages</a>
 
-                    <li>
-                        <a href="mentorDocuments.html" class="list-text"><i class="fa fa-folder-o fa-2x"></i>Documents</a>
-                    </li>
-                    <li>
-                        <a href="mentorMessages.html" class="list-text"><i class="fa fa-comment-o fa-2x"></i>Messages</a>
-                    </li>
-                    <li>
-                        <a href="mentorRoster.html" class="list-text"><i class="fa fa-list-alt fa-2x"></i>Student Roster</a>
                     </li>
                     <li>
                     <a href="{{logout_url}}" class="list-text"><i class="fa fa-sign-out fa-2x"></i>Log Out</a>
@@ -70,14 +68,13 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <p style="text-align:right;"><b>{{space_name}}: {{space_key}}</b></a></p>
-                            <h1>Your Student Roster</h1>
-                            <h4>
-                            <ul>
-                            {% for student in students %}
-                                <li>{{student.username}}, {{student.useremail}}</li>
-                            {% endfor %}
-                            </ul>
-                            </h4>
+                            <h1><i><b>Welcome to the Student Dashboard! </b></i></h1>
+                            <br>
+                            <h2><i> What's SUP? <i></h2>
+                            <h4> Science UP's focus is to improve undergraduate research by better connecting mentor and mentee. SUP is a web-application that promotes collaboration by integrating schedules, messaging, and document sharing into a unified workspace. </h4>
+                            <br>
+                            <h3><i>To your left, find our features: </i></h3>
+                            <h4> <b>Check In</b> &nbsp; Integrates the Yo. API to notify mentors in real-time when the student reaches the lab. This is a simple method that pushes a notification to a mentor's mobile device. Mentors will find this useful so that they are aware of when students are working in the lab. <br> <br><b>Documents </b> &nbsp; Integrates the Dropbox Saver API to allow users to upload research files to their dropbox. Mentors and students can share lab data, notes, and relevant journal articles seamlessly. <br> <br><b>Messaging</b> &nbsp; Why use email? They get lost. Messaging is a simpler and direct forum which displays conversation between members of the same lab group. Users are openly able to ask and answer questions, as well as discuss issues regarding the study. Each message is chronologically ordered with the newest messages appearing first. This is a quick and easy way to communicate with everyone in the lab group. <br><br> 
                         </div>
                     </div>
                 </div>

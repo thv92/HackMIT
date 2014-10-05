@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Message Board</title>
+    <title>Documents</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -18,7 +18,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS for Sidebar --> 
     <link href="../stylesheets/simple-sidebar.css" rel="stylesheet">
-
     </head>
 
     <body>
@@ -30,19 +29,6 @@
         .list-text{
             /*padding-left: 1;*/
         }
-        .post{
-         text-align: left;
-         background: white;
-         color: black;
-         padding: 2px;
-         border: 2px solid;
-         border-color: gray;
-         border-radius: 5px;
-         box-shadow: 2px 2px 4px rgba(0,0,0,.1);
-         margin: 20 px;
-         margin-color: white;
-        }
-        
     </style>
 
 
@@ -53,11 +39,11 @@
                 <ul class="sidebar-nav li-text">
                     <li class="sidebar-brand">
                         <a href="userMentorMain.html">
-                        Mentor Dashboard
+                            Mentor Dashboard
                         </a>
                     </li>
  
-                   <li>
+                  <li>
                         <a href="mentorCheck_In.html" class="list-text"><i class="fa fa-clock-o fa-2x"></i>Check In</a>
                     </li>
 
@@ -68,7 +54,7 @@
                         <a href="mentorMessages.html" class="list-text"><i class="fa fa-comment-o fa-2x"></i>Messages</a>
                     </li>
                     <li>
-                    <a href="mentorRoster.html" class="list-text"><i class="fa fa-list-alt fa-2x"></i>Student Roster</a>
+                        <a href="mentorRoster.html" class="list-text"><i class="fa fa-list-alt fa-2x"></i>Student Roster</a>
                     </li>
                     <li>
                     <a href="{{logout_url}}" class="list-text"><i class="fa fa-sign-out fa-2x"></i>Log Out</a>
@@ -83,44 +69,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <p style="text-align:right;"><b>{{space_name}}: {{space_key}}</b></a></p>
-                            <h1>Messages</h1>
-                                <form method="post">
-                                Mentee/Mentor: <br><input name="sender" placeholder="Your Name">
-                                 <br>
-                                 <br>
-                                Subject <br>
-                                <input name="subject" placeholder="Subject">
-                                <br>
-                                <br>
-                                Message: <br>
-                                <textarea name="message" placeholder="Write a Message"></textarea>
-                                <br>
-                                <br>
-                                <button>Send!</button>
-                             </form>
-
-                             <br>
-                             <br>
-                            {% for wall_post in wall_posts %}
-                            <div class="post">
-                                <div align= "right">
-                             <div class="timestamp">{{ wall_post.timestamp }}</div>
-                                <form action="/deleteS" method="post">
-                                <input name="key" value="{{ wall_post.key.urlsafe() }}" type="hidden">
-                             <br>
-                             </div>
-                                <div class="subject"><em><b>{{wall_post.subject}}</em></b></div>
-                                <div class="message">{{ wall_post.message }}</div>
-                                <div class="sender"><em>- {{ wall_post.sender}}</em></div>
-                            <br>
-                            <center>
-                            <button id="delete-button">Delete Post</button>
-                             </center>
-                          </form>
-                    </div>
-                    <br>
-                    {% endfor %}
-
+                            <h1>Upload Documents</h1>
+                            <h5>Connect with Dropbox to share your documents.</h5>
+                               <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="b0sj4vv0q580ak3"></script>
+                               <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
+                            </p>
                         </div>
                     </div>
                 </div>

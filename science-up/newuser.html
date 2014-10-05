@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Science Up - New User</title>
+    <link href="stylesheets/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+    <h1>Nonograms</h1>
+  </div>
+  <h4>User Registration</h4>
+  <form class="registration" method="post" id="registration">
+    Username: &nbsp;&nbsp;&nbsp;<input class="input" name="username" placeholder="Enter your username"><br>
+    <select class="input" name="classmenu">
+      <option value="student">Student</option>
+      <option value="mentor">Mentor</option>
+    </select>
+    <br>
+    <br>
+    <b>Create New Research Space</b><br>
+      Name: &nbsp;&nbsp;&nbsp;<input class="input" name="new_name" placeholder="Enter a name for a new research space"><br>
+        <!--<input class="input" name="new_key" placeholder="Enter the research space key"><br>-->
+
+    <br>
+    <b>Join Existing Research Space</b><br>
+    <input class="input" name="existing_key" placeholder="Research Space Key"><br>
+    <br><button>Start Connecting!</button>
+
+  </form>
+  <div>
+    <p>Note, usernames must be unique, cannot be more than 20 characters long, and should not contain special characters.</p>
+  </div>
+</body>
+
+</html>
